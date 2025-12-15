@@ -1,23 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pranav Chougule</title>
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind Dark Theme -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <script>
     tailwind.config = {
       theme: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        },
         extend: {
           colors: {
-            bg: '#0f172a',
-            card: '#111827',
-            accent: '#38bdf8'
+            bg: '#0b0f19',
+            panel: '#111827',
+            accent: '#60a5fa',
+            muted: '#9ca3af'
           }
         }
       }
@@ -25,68 +32,92 @@
   </script>
 </head>
 
-<body class="bg-bg text-gray-200 font-sans">
+<body class="bg-bg text-gray-200">
+
+<!-- ================= NAV ================= -->
+<nav class="fixed top-0 w-full bg-bg/80 backdrop-blur border-b border-white/5 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <span class="font-semibold tracking-wide">Pranav Chougule</span>
+    <div class="space-x-6 text-sm text-muted">
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#research" class="hover:text-white">Research</a>
+      <a href="#projects" class="hover:text-white">Projects</a>
+      <a href="#publications" class="hover:text-white">Publications</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </div>
+  </div>
+</nav>
 
 <!-- ================= HERO ================= -->
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-  <h1 class="text-5xl md:text-6xl font-bold mb-4">
-    Pranav Chougule
-  </h1>
+<section class="min-h-screen flex items-center pt-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+      Robotics × AI for<br>
+      Autonomous Inspection
+    </h1>
 
-  <p class="text-xl md:text-2xl text-gray-400 mb-6">
-    PhD Researcher · Robotics · AI · Autonomous Inspection
-  </p>
+    <p class="text-xl text-muted max-w-2xl mb-8">
+      PhD researcher at Drexel University working on robotic ultrasonic testing,
+      Vision-Language-Action models, and intelligent sensing systems
+      for civil infrastructure.
+    </p>
 
-  <p class="max-w-2xl text-gray-400 mb-8">
-    I work on robotic ultrasonic testing, Vision-Language-Action models,
-    and intelligent sensing systems for civil infrastructure inspection.
-  </p>
-
-  <div class="flex gap-4">
-    <a href="#" class="px-6 py-3 bg-accent text-black rounded-lg font-semibold hover:opacity-80">
-      Download CV
-    </a>
-    <a href="#" class="px-6 py-3 border border-gray-500 rounded-lg hover:border-accent">
-      GitHub
-    </a>
+    <div class="flex gap-4">
+      <a href="#" class="px-6 py-3 bg-accent text-black rounded-md font-medium hover:opacity-90">
+        CV
+      </a>
+      <a href="#" class="px-6 py-3 border border-white/20 rounded-md hover:border-accent">
+        Google Scholar
+      </a>
+      <a href="#" class="px-6 py-3 border border-white/20 rounded-md hover:border-accent">
+        GitHub
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- ================= ABOUT ================= -->
-<section class="py-20 px-6 max-w-5xl mx-auto">
-  <h2 class="text-3xl font-bold mb-6">About</h2>
-  <p class="text-gray-400 leading-relaxed">
-    I am a PhD researcher at Drexel University working at the intersection of
-    robotics, artificial intelligence, and structural engineering.
-    My research focuses on autonomous inspection systems that combine
-    robotic manipulation, advanced sensing, and learning-based decision making.
-  </p>
+<section id="about" class="py-24 border-t border-white/5">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-6">About</h2>
+    <p class="text-muted leading-relaxed">
+      I am a PhD researcher in the Department of Civil, Architectural,
+      and Environmental Engineering at Drexel University.
+      My work focuses on bridging robotics, AI, and structural engineering
+      to enable autonomous, data-driven inspection of built infrastructure.
+      I build complete systems — from custom end-effectors and sensing pipelines
+      to learning-based decision and control.
+    </p>
+  </div>
 </section>
 
 <!-- ================= RESEARCH ================= -->
-<section class="py-20 px-6 bg-card">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold mb-10">Research Areas</h2>
+<section id="research" class="py-24 bg-panel">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-12">Research Areas</h2>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="p-6 bg-bg rounded-xl">
-        <h3 class="font-semibold text-xl mb-2">Robotic Ultrasonic Testing</h3>
-        <p class="text-gray-400 text-sm">
-          Autonomous UPV inspection using custom end-effectors and force-aware control.
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 border border-white/10 rounded-xl hover:border-accent transition">
+        <h3 class="font-medium text-lg mb-2">Robotic Ultrasonic Testing</h3>
+        <p class="text-muted text-sm">
+          Autonomous UPV inspection using UR manipulators,
+          force-aware control, and custom transducer end-effectors.
         </p>
       </div>
 
-      <div class="p-6 bg-bg rounded-xl">
-        <h3 class="font-semibold text-xl mb-2">Vision-Language-Action Models</h3>
-        <p class="text-gray-400 text-sm">
-          Learning perception-to-action policies for complex robotic tasks.
+      <div class="p-6 border border-white/10 rounded-xl hover:border-accent transition">
+        <h3 class="font-medium text-lg mb-2">Vision-Language-Action Models</h3>
+        <p class="text-muted text-sm">
+          Learning perception-to-action policies for complex,
+          contact-rich robotic tasks.
         </p>
       </div>
 
-      <div class="p-6 bg-bg rounded-xl">
-        <h3 class="font-semibold text-xl mb-2">Autonomous Mapping</h3>
-        <p class="text-gray-400 text-sm">
-          ROS-based perception, mapping, and decision-making systems.
+      <div class="p-6 border border-white/10 rounded-xl hover:border-accent transition">
+        <h3 class="font-medium text-lg mb-2">Autonomous Mapping & Perception</h3>
+        <p class="text-muted text-sm">
+          ROS-based RGB-D perception, mapping, and decision-making systems
+          for unstructured environments.
         </p>
       </div>
     </div>
@@ -94,56 +125,61 @@
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section class="py-20 px-6 max-w-5xl mx-auto">
-  <h2 class="text-3xl font-bold mb-10">Projects</h2>
+<section id="projects" class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-12">Selected Projects</h2>
 
-  <div class="grid md:grid-cols-2 gap-8">
-    <div class="bg-card p-6 rounded-xl">
-      <h3 class="text-xl font-semibold mb-2">UPV-VLA Robotic Inspection</h3>
-      <p class="text-gray-400 text-sm mb-3">
-        Vision-Language-Action system for autonomous ultrasonic inspection
-        using UR robots.
-      </p>
-      <p class="text-xs text-gray-500">
-        ROS 2 · PyTorch · UR3e · RealSense
-      </p>
-    </div>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="p-6 bg-panel rounded-xl">
+        <h3 class="text-xl font-medium mb-2">
+          UPV-VLA Robotic Inspection
+        </h3>
+        <p class="text-muted text-sm mb-4">
+          Vision-Language-Action system enabling autonomous ultrasonic
+          inspection using UR3e manipulators.
+        </p>
+        <p class="text-xs text-muted">
+          ROS 2 · PyTorch · RealSense · UR3e
+        </p>
+      </div>
 
-    <div class="bg-card p-6 rounded-xl">
-      <h3 class="text-xl font-semibold mb-2">Autonomous Terrain Mapping</h3>
-      <p class="text-gray-400 text-sm mb-3">
-        Drone-based RGB-D mapping and object detection in unstructured terrain.
-      </p>
-      <p class="text-xs text-gray-500">
-        ROS 2 · Open3D · PX4 · CUDA
-      </p>
+      <div class="p-6 bg-panel rounded-xl">
+        <h3 class="text-xl font-medium mb-2">
+          Autonomous Terrain Mapping
+        </h3>
+        <p class="text-muted text-sm mb-4">
+          RGB-D drone mapping and object detection in unstructured terrain.
+        </p>
+        <p class="text-xs text-muted">
+          ROS 2 · PX4 · Open3D · CUDA
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ================= PUBLICATIONS ================= -->
-<section class="py-20 px-6 bg-card">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6">Publications</h2>
-    <ul class="text-gray-400 list-disc ml-6">
+<section id="publications" class="py-24 bg-panel">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-6">Publications</h2>
+    <ul class="space-y-4 text-muted">
       <li>
-        Vision-Language Guided Robotic Ultrasonic Testing for Masonry.
-        <i>IEEE / SPIE (Under Review)</i>
+        <span class="text-gray-200">
+          Vision-Language Guided Robotic Ultrasonic Testing for Masonry
+        </span><br>
+        <span class="text-sm italic">IEEE / SPIE — Under Review</span>
       </li>
     </ul>
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section class="py-20 px-6 text-center">
-  <h2 class="text-3xl font-bold mb-4">Contact</h2>
-  <p class="text-gray-400 mb-6">
-    pc866@drexel.edu
-  </p>
-  <p class="text-gray-500 text-sm">
-    © 2025 Pranav Chougule
-  </p>
+<section id="contact" class="py-24 text-center">
+  <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+  <p class="text-muted mb-2">pc866@drexel.edu</p>
+  <p class="text-muted text-sm">© 2025 Pranav Chougule</p>
 </section>
 
 </body>
 </html>
+
