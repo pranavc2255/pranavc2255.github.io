@@ -1,1 +1,149 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pranav Chougule</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Dark Theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#0f172a',
+            card: '#111827',
+            accent: '#38bdf8'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-bg text-gray-200 font-sans">
+
+<!-- ================= HERO ================= -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+  <h1 class="text-5xl md:text-6xl font-bold mb-4">
+    Pranav Chougule
+  </h1>
+
+  <p class="text-xl md:text-2xl text-gray-400 mb-6">
+    PhD Researcher · Robotics · AI · Autonomous Inspection
+  </p>
+
+  <p class="max-w-2xl text-gray-400 mb-8">
+    I work on robotic ultrasonic testing, Vision-Language-Action models,
+    and intelligent sensing systems for civil infrastructure inspection.
+  </p>
+
+  <div class="flex gap-4">
+    <a href="#" class="px-6 py-3 bg-accent text-black rounded-lg font-semibold hover:opacity-80">
+      Download CV
+    </a>
+    <a href="#" class="px-6 py-3 border border-gray-500 rounded-lg hover:border-accent">
+      GitHub
+    </a>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="py-20 px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-bold mb-6">About</h2>
+  <p class="text-gray-400 leading-relaxed">
+    I am a PhD researcher at Drexel University working at the intersection of
+    robotics, artificial intelligence, and structural engineering.
+    My research focuses on autonomous inspection systems that combine
+    robotic manipulation, advanced sensing, and learning-based decision making.
+  </p>
+</section>
+
+<!-- ================= RESEARCH ================= -->
+<section class="py-20 px-6 bg-card">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10">Research Areas</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-bg rounded-xl">
+        <h3 class="font-semibold text-xl mb-2">Robotic Ultrasonic Testing</h3>
+        <p class="text-gray-400 text-sm">
+          Autonomous UPV inspection using custom end-effectors and force-aware control.
+        </p>
+      </div>
+
+      <div class="p-6 bg-bg rounded-xl">
+        <h3 class="font-semibold text-xl mb-2">Vision-Language-Action Models</h3>
+        <p class="text-gray-400 text-sm">
+          Learning perception-to-action policies for complex robotic tasks.
+        </p>
+      </div>
+
+      <div class="p-6 bg-bg rounded-xl">
+        <h3 class="font-semibold text-xl mb-2">Autonomous Mapping</h3>
+        <p class="text-gray-400 text-sm">
+          ROS-based perception, mapping, and decision-making systems.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="py-20 px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-bold mb-10">Projects</h2>
+
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="bg-card p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-2">UPV-VLA Robotic Inspection</h3>
+      <p class="text-gray-400 text-sm mb-3">
+        Vision-Language-Action system for autonomous ultrasonic inspection
+        using UR robots.
+      </p>
+      <p class="text-xs text-gray-500">
+        ROS 2 · PyTorch · UR3e · RealSense
+      </p>
+    </div>
+
+    <div class="bg-card p-6 rounded-xl">
+      <h3 class="text-xl font-semibold mb-2">Autonomous Terrain Mapping</h3>
+      <p class="text-gray-400 text-sm mb-3">
+        Drone-based RGB-D mapping and object detection in unstructured terrain.
+      </p>
+      <p class="text-xs text-gray-500">
+        ROS 2 · Open3D · PX4 · CUDA
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PUBLICATIONS ================= -->
+<section class="py-20 px-6 bg-card">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Publications</h2>
+    <ul class="text-gray-400 list-disc ml-6">
+      <li>
+        Vision-Language Guided Robotic Ultrasonic Testing for Masonry.
+        <i>IEEE / SPIE (Under Review)</i>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="py-20 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-4">Contact</h2>
+  <p class="text-gray-400 mb-6">
+    pc866@drexel.edu
+  </p>
+  <p class="text-gray-500 text-sm">
+    © 2025 Pranav Chougule
+  </p>
+</section>
+
+</body>
+</html>
